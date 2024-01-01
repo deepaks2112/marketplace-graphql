@@ -1,0 +1,21 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Product {
+  id: ID!
+  name: String!
+  price: String!
+  sellers: [Seller!]
+}
+
+type Seller {
+  id: ID!
+  name: String!
+  price: String!
+}
+
+type Query {
+  getProducts(q: String): [Product]
+  getSellers(q: String): [Seller] 
+}
